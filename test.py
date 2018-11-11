@@ -82,10 +82,27 @@ def validate(model):
 """ rf = RandomForestRegressor(n_estimators=100)
 validate(rf) """
 
-## What the model says about the data
-
-from rfpimp import *
+""" ## What the model says about the data
+import matplotlib.pyplot as plt
+from rfpimp import importances
 rf = RandomForestRegressor(n_estimators=100)
 rf.fit(X, y)
 I = importances(rf, X, y)
 print(I)
+
+I = importances(rf,X,y)
+I.plot(kind='barh', legend=False)
+plt.show() """
+
+
+""" from sklearn import linear_model
+
+lm = linear_model.LinearRegression() # create linear model
+lm.fit(X, y)
+validate(lm) """
+
+from sklearn import ensemble
+
+gbr = ensemble.GradientBoostingRegressor() # create boosting model
+gbr.fit(X, y)
+validate(gbr)
