@@ -1,7 +1,7 @@
 
 import pandas as pd # Import the library and give a short alias: pd
 
-rent = pd.read_csv("data/rent-ideal.csv")
+rent = pd.read_csv("rent-ideal.csv")
 #print(rent.head(5))
 
 """ prices = rent['price']
